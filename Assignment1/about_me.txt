@@ -1,0 +1,10 @@
+Name: Mark Mersnik
+ID: 010455185
+Major: Electrical Engineering
+Email: markmersnik@gmail.com	
+Status: Undergraduate
+Yes, I am a graduating senior.
+No, I am not repeating the class.
+Completed Courses: CS46A, CS46B, Math 42, and CS146.
+Additional Information: 
+Special Topic: I would love to hear about machine learning applications, specifically deep learning, that utilize Java. 
