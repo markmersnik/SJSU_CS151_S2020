@@ -71,7 +71,8 @@ public class Student {
 	public String getDepartment() {
 		return this.department;
 	}
-	
+    
+    //Course, non-static inner class that prints the class schedule of the student.	
 	public class Course {
 		
 		private String[] courses = new String[] {"CS 151", "PHIL 101", "CS 146", "GEOG 112"};
@@ -82,6 +83,5 @@ public class Student {
 				System.out.println("Course " + Integer.toString(i + 1) + ": " + courses[i]);
 			}
 		}
-		
 	}
 }
