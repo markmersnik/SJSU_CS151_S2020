@@ -1,0 +1,3 @@
+int - a primitive variable type that store whole number numerical data.
+
+Integer - a class that converts the primitive type int into an object in order to alter its characteristics.
