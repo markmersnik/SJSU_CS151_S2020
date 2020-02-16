@@ -1,7 +1,5 @@
 package homework2;
 
-import homework2.Student.Course;
-
 public class StudentTest {
 
 	public static void main(String[] args) {
