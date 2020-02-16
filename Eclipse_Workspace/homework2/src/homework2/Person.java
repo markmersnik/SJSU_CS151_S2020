@@ -1,6 +1,7 @@
 package homework2;
 
 public class Person {
+
 	private String firstName;
 	private String lastName;
 	private int age;
@@ -10,7 +11,7 @@ public class Person {
 	private float weight;
 	
 	Person(String firstName, String lastName, int age, String ssn, String address, String gender, float weight) {
-		
+	
 		this.firstName = firstName; 
 		this.lastName = lastName;
 		this.age = age;
@@ -81,18 +82,21 @@ public class Person {
 	}
 	
 	//Overloaded toString method 
-	public String toString(Person p) {
-		return p.getFirstName() + " " + p.getLastName();
+	public String toString(String first, String last) {
+		return first + " " + last;
+	}
+	
+	public String toString(String firstName, String lastName, int age, String ssn, String address, String gender, float weight) {
+		return firstName + " " + this.lastName + "'s attributes:\n" +
+				"Age: " + this.age + "\n" +
+				"SSN: " + this.ssn + "\n" + 
+				"Address: " + this.address + "\n" +
+				"Gender: " + this.gender + "\n" + 
+				"Weight: " + this.weight + "\n";
 	}
 	
 	//Introduce method that print person's attributes
 	public void introduce() {
-		System.out.println(this.firstName + " " + this.lastName + "'s attributes:");
-		System.out.println("Age: " + this.age);
-		System.out.println("SSN: " + this.ssn);
-		System.out.println("Address: " + this.address);
-		System.out.println("Gender: " + this.gender);
-		System.out.println("Weight: " + this.weight);
+		System.out.println(this.toString(this.firstName, this.lastName, this.age, this.ssn, this.address, this.gender, this.weight));
 	}
-	
 }
