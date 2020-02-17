@@ -1,32 +1,16 @@
 package homework2;
 
-public class Product {
+public final class Product {
 	
-	private String name;
-	private String description;
-	private float price;
-	private int max_quantity;
+	final String name;
+	final String description;
+	final double price;
+	final int max_quantity;
 	
-	Product(String name, String desc, float price, int max) {
+	Product(String name, String desc, double price, int max) {
 		this.name = name;
 		this.description = desc;
 		this.price = price;
-		this.max_quantity = max;
-	}
-	
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	public void setDescription(String desc) {
-		this.description = desc;
-	}
-	
-	public void setPrice(float price) {
-		this.price = price;
-	}
-	
-	public void setMaxQuantity(int max) {
 		this.max_quantity = max;
 	}
 	
@@ -38,7 +22,7 @@ public class Product {
 		return this.description;
 	}
 	
-	public float getPrice() {
+	public double getPrice() {
 		return this.price;
 	}
 	
@@ -46,7 +30,13 @@ public class Product {
 		return this.max_quantity;
 	}
 	
+	//Overloaded toString method
 	public String toString() {
-		
+		return "Name: " + this.name + "\n" + "Description: " + this.description + "\n";
+	} 
+	
+	public String toString(String name, String desc, double price, int max) {
+		return "Name: " + this.name + "\n" + "Description: " + this.description + "\n" 
+				+ "Price: $" + this.price + "\n" + "Maximum Quantity: " + this.max_quantity + "\n";
 	}
 }

@@ -50,6 +50,15 @@ public class Employee extends Person{
 		return this.pay;
 	}
 	
+	public int calculatePay() {
+		
+		if(this.status.equalsIgnoreCase("full time")) {
+		 	
+		}
+		
+		return 0;
+	}
+	
 	public void introduce() {
 		super.introduce();
 		System.out.println("Employee ID: " + this.id);
