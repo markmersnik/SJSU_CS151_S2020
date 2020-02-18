@@ -82,8 +82,8 @@ public class Person {
 	}
 	
 	//Overloaded toString method 
-	public String toString(String first, String last) {
-		return first + " " + last;
+	public String toString() {
+		return this.firstName + " " + this.lastName;
 	}
 	
 	public String toString(String firstName, String lastName, int age, String ssn, String address, String gender, float weight) {
@@ -92,7 +92,7 @@ public class Person {
 				"SSN: " + this.ssn + "\n" + 
 				"Address: " + this.address + "\n" +
 				"Gender: " + this.gender + "\n" + 
-				"Weight: " + this.weight + "\n";
+				"Weight: " + this.weight;
 	}
 	
 	//Introduce method that print person's attributes

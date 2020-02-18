@@ -50,13 +50,18 @@ public class Employee extends Person{
 		return this.pay;
 	}
 	
-	public int calculatePay() {
+	public void calculatePay(int duration) {
+		
+		float paycheck;
 		
 		if(this.status.equalsIgnoreCase("full time")) {
-		 	
+			paycheck = (this.pay * duration)/52;
+			System.out.println("For " + duration + " weeks, " + this.toString() + "'s pay is $" + String.format("%.2f", paycheck) + "\n");
 		}
-		
-		return 0;
+		else {
+			paycheck = this.pay * duration;
+			System.out.println("For " + duration + " hours, " + this.toString() + "'s pay is $" + (int)paycheck + "\n");
+		}
 	}
 	
 	public void introduce() {
@@ -64,6 +69,11 @@ public class Employee extends Person{
 		System.out.println("Employee ID: " + this.id);
 		System.out.println("Employee Status: " + this.status);
 		System.out.println("Start Date: " + this.start_date);
-		System.out.println("Pay: " + this.pay);
+		if(this.status.equalsIgnoreCase("full time")) {
+			System.out.println("Pay: $" + (int)this.pay + "/yr");
+		}
+		else {
+			System.out.println("Pay: $" + (int)this.pay + "/hr");
+		}
 	}
 }
